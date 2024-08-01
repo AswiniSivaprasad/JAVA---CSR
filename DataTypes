@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class DatatypesJava {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a Byte Value: ");
+		byte b = scan.nextByte();
+		System.out.println("Byte value is: "+b);
+		
+		System.out.println("Enter a Short Value: ");
+		short s = scan.nextShort();
+		System.out.println("Short value is: "+s);
+		
+		System.out.println("Enter an Int Value: ");
+		int i = scan.nextInt();
+		System.out.println("Integer value is: "+i);
+		
+		System.out.println("Enter a long value: ");
+		long l = scan.nextLong();
+		System.out.println("Long value is: "+l);
+		
+		System.out.println("Enter a Float Value: ");
+		float f = scan.nextFloat();
+		System.out.println("Float value is: "+f);
+		
+		System.out.println("Enter a double value: ");
+		double d = scan.nextDouble();
+		System.out.println("Double value is: "+d);
+		
+		scan.nextLine();    //Reads the Enter
+		
+		/*When ever we use a scan.nextLine method after any next() method 
+		  the we must use an extra scan.nextLine() to print the output
+		 */
+		
+		System.out.println("Enter a sentence: ");
+		String str = scan.nextLine();     //Reads the input
+		System.out.println("Sentence is: "+str);
+		
+		System.out.println("Enter a Word: ");
+		String w = scan.next();
+		System.out.println("Word is: "+w);
+		}
+}

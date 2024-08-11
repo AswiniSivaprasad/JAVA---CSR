@@ -1,0 +1,29 @@
+package Patterns;
+
+import java.util.Scanner;
+
+public class hallowEqiTriangle {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter n: ");
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            // Print leading dashes
+            for (int j = n - 1; j > i; j--) {
+                System.out.print(" ");
+            }
+            // Print stars and dashes
+            for (int k = 0; k <= i; k++) {
+                if (k == 0 || k == i || i == n - 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // Move to the next line
+            System.out.println();
+        }
+	}
+}

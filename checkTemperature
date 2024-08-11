@@ -1,0 +1,12 @@
+package controlConstructs;
+
+public class checkTemperature {
+
+	public static void main(String[] args) {
+		int currentTemperature = 85;
+		int thresholdTemperature = 80;
+		if(currentTemperature > thresholdTemperature ) {
+			System.out.println("Warning: Temperature exceeds threshold!");
+		}
+	}
+}

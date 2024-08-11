@@ -1,0 +1,17 @@
+package loopingConstructs;
+
+import java.util.Scanner;
+
+public class countDownWhile {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		int n = sc.nextInt();
+		int i = n;
+		while(i>=0) {
+			System.out.println(i+" seconds remaining");
+			i--;
+		}
+	}
+}

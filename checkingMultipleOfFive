@@ -1,0 +1,19 @@
+package controlConstructs;
+
+import java.util.Scanner;
+
+public class checkMultipleOf5 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int n = sc.nextInt();
+		checkMultipleOfFive(n);
+	}
+	
+	public static void checkMultipleOfFive(int n) {
+		if(n%5 == 0) {
+			System.out.println("The number "+n+" is multiple of 5");
+		}
+	}
+}

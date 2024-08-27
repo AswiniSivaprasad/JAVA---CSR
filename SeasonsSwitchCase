@@ -1,0 +1,35 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class SeasonsSwitchCase {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter month number");
+        int month = sc.nextInt();
+        switch(month) {
+        case 12:
+        case 1:
+        case 2:
+        	System.out.println("The month number " +month+ " corresponds to Winter.");
+        break;
+        case 3:
+        case 4:
+        case 5:
+        	System.out.println("The month number " +month+ " corresponds to Spring.");
+        break;
+        case 6:
+        case 7:
+        case 8:
+        	System.out.println("The month number " +month+ " corresponds to Summer.");
+        break;
+        case 9:
+        case 10:
+        case 11:
+        	System.out.println("The month number " +month+ " corresponds to Fall.");
+        break;
+        default: System.out.println("The month number " +month+ " corresponds to Invalid Month Number.");
+        }
+	}
+}

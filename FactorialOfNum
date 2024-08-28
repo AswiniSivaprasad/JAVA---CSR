@@ -1,0 +1,45 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		int num = sc.nextInt();
+		int result = factorialNum(num);
+		System.out.print("The factorial of "+num+" is "+result);
+	}
+	public static int factorialNum(int num) {
+		if(num==0) {
+			return 1;
+		}
+		else {
+			int factorial = 1;
+			for(int i=1;i<=num;i++) {
+				factorial = factorial*i;
+			}
+			return factorial;
+		}
+	}
+}
+
+//Another Method
+
+/*
+	int n = sc.nextInt();
+	System.out.print("Factorial of " +n+ " is ");
+	if(n == 0) {
+	    System.out.print(1);
+	}
+	else {
+	   int factorial = 1;
+	   for(int i=1;i<=n;i++) {
+	   factorial *= i;
+	}
+	System.out.print(factorial);
+  }
+}
+}
+*/

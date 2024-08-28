@@ -1,0 +1,38 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class CountEvenDigitOddDigit {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		int n = sc.nextInt();
+		int countEven = 0;
+		int countOdd = 0;
+		int sumEven = 0;
+		int sumOdd = 0;
+		int count = 0;
+		int sum = 0;
+		while(n>0) {
+			int digit = n%10;
+			if(digit%2==0) {
+				sumEven = sumEven+digit;
+				countEven++;
+			}
+			else {
+				sumOdd = sumOdd+digit;
+				countOdd++;
+			}
+			sum = sum+digit;
+			n=n/10;
+			count++;
+		}
+		System.out.println("The number of digits are: "+count);
+		System.out.println("The sum of digits are: "+sum);
+		System.out.println("Even digits are: "+countEven);
+		System.out.println("Sum of Even digits are: "+sumEven);
+		System.out.println("Odd digits are: "+countOdd);
+		System.out.print("Sum of Odd digits are: "+sumOdd);
+	}
+}

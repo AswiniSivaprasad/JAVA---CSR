@@ -1,0 +1,26 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number: ");
+		int n = sc.nextInt();
+		int digit=0;
+		int rev=0;
+		int num=n;
+		while(num>0) {
+			digit=num%10;              //take out last digit and store in digit
+			rev=rev*10+digit;          //multiply with 10 and add the digit to reverse
+			num=num/10;                //Remove last digit
+		}
+		if(rev==n) {                   //Check if the reversed number and original number are same
+			System.out.println("The number "+n+" is a Palindrome");   //If same print it as a Palindrome.
+		} 
+		else {
+			System.out.println("The number "+n+" is not a Palindrome");
+		}
+	}
+}

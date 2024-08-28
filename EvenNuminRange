@@ -1,0 +1,25 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class EvenNuminRange {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter lower range m: ");
+		int m = sc.nextInt();
+		System.out.println("Enter upper range n: ");
+		int n = sc.nextInt();
+		System.out.print("The even numbers between "+m+" and "+n+" are: ");
+		for(int i=m;i<=n;i++) {
+			if(i%2==0) {
+				if(i<n-1) {                       //to remove "," for last digit
+					System.out.print(i+", ");
+				}
+				else {
+					System.out.print(i);
+				}
+			}
+		}
+	}
+}

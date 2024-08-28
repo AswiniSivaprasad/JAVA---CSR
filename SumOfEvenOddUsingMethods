@@ -1,0 +1,46 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class SumOfEvenOddUsingMethods {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		int n = sc.nextInt();
+		findEven(n);
+		findOdd(n);
+	}
+	public static void findEven(int n) {
+		int Evensum = 0;
+		System.out.print("Even numbers are: ");
+		for(int i=1;i<=n;i++) {
+			if(i%2==0) {
+				Evensum=Evensum+i;
+				if(i<n-1) {                       //to remove "," for last digit
+					System.out.print(i+", ");
+				}
+				else {
+					System.out.println(i);
+				}
+			}
+		}
+		System.out.println("Sum of even numbers is: "+Evensum);
+	}
+	public static void findOdd(int n) {
+		int Oddsum = 0;
+		System.out.print("Odd numbers are: ");
+		for(int i=1;i<=n;i++) {
+			if(i%2!=0) {
+				Oddsum = Oddsum+i;
+				if(i<n-1) {
+					System.out.print(i+", ");
+				}
+				else {
+					System.out.println(i);
+				}
+			}
+		}
+        System.out.print("Sum of odd numbers is: "+Oddsum);
+	}
+}

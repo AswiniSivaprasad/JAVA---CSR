@@ -1,0 +1,24 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class DecimalToBinary {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a decimal number");
+		int decimal = sc.nextInt();
+		
+		//String binary = Integer.toBinaryString(decimal);
+		
+		
+		String binary = "";               //Initialises a string that holds binary representation of decimal
+		int tempDecimal = decimal;        //Creates temporary copy of decimal number to manipulate during conversion.
+		while(tempDecimal>0) {            
+			int remainder = tempDecimal%2;
+			binary = remainder + binary;
+			tempDecimal = tempDecimal / 2; //To remove last binary digit processes, effectively shifting right binary terms
+		}
+		System.out.println("The binary equivalent of " +decimal+" is "+binary);
+	}
+}

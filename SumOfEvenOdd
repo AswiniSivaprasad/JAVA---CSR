@@ -1,0 +1,40 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class SumOfEvenOdd {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		int n = sc.nextInt();
+		int Evensum=0;
+		int Oddsum=0;
+		System.out.print("Even numbers are: ");
+		for(int i=1;i<=n;i++) {
+			if(i%2==0) {
+				Evensum=Evensum+i;
+				if(i<n-1) {                       //to remove "," for last digit
+					System.out.print(i+", ");
+				}
+				else {
+					System.out.println(i);
+				}
+			}
+		}
+		System.out.println("Sum of even numbers is: "+Evensum);
+		System.out.print("Odd numbers are: ");
+		for(int i=1;i<=n;i++) {
+			if(i%2!=0) {
+				Oddsum = Oddsum+i;
+				if(i<n-1) {
+					System.out.print(i+", ");
+				}
+				else {
+					System.out.println(i);
+				}
+			}
+		}
+        System.out.print("Sum of odd numbers is: "+Oddsum);
+	}
+}

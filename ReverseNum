@@ -1,0 +1,21 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class ReverseNum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number: ");
+		int num = sc.nextInt();
+		System.out.println("Original number: "+num);
+		int rev = 0;      //Initialize reverse = 0
+		int digit = 0;    //Initialize digit = 0
+		while(num>0) {       //If number is greater than 0
+			digit=num%10;       //take out last digit and store in digit
+			rev = rev*10+digit; //multiply with 10 and add the digit to reverse 
+			num=num/10;         //Remove last digit
+		}
+		System.out.print("Reversed number: "+rev);  //Print the reversed number
+	}
+}

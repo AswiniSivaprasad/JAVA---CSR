@@ -1,0 +1,25 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class SingleDigitSum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter n: ");
+	    int num = sc.nextInt();
+	    int digit=0;
+		int sum=0;
+		int n=num;
+		while (n>0 || sum>9) {
+			if(n==0) {
+				n=sum;
+				sum=0;
+			}
+			digit=n%10;
+			sum=sum+digit;
+			n=n/10;
+		}
+		System.out.print("The single-digit sum of digits of "+num+" is: "+sum);
+	}
+}

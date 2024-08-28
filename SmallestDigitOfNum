@@ -1,0 +1,21 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class SmallestDigitOfNum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter n: ");
+		int n = sc.nextInt();
+		int smallestDigit = n%10;  //Initialize with the last digit
+		while(n>0) {               //Extract digits one by one using a loop
+			int digit = n%10;      //Get the last digit
+			if(digit<smallestDigit) {  //Update smallest digit if current digit is smaller
+				smallestDigit = digit;
+			}
+			n=n/10;      //Remove the last digit for the next iteration
+		}
+		System.out.println("Smallest digit in a number is: "+smallestDigit);
+	}
+}

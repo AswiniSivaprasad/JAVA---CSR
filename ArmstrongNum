@@ -1,0 +1,35 @@
+package NumberManipulation;
+
+import java.util.Scanner;
+
+public class ArmstrongNum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number: ");
+		int n = sc.nextInt();
+		int num = n;
+		int count=0;
+		int sum=0;
+		while(num>0) {  //Count the number of digits in number n
+			num = num/10;
+			count++;
+		}
+		num=n;              
+		while(num>0) {
+			int digit = num%10; //take out each digit of number n
+			int power = 1;      //Initialize power to 1
+			for(int i=1;i<=count;i++) {   
+				power=power*digit;
+			}
+			sum=sum+power;
+			num=num/10;
+		}
+		if(sum==n) {
+			System.out.println("The number "+n+" is an armstrong number");
+		}
+		else {
+			System.out.println("The number "+n+" is not an armstrong number");
+		}
+	}
+}
